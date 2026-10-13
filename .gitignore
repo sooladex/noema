@@ -1,0 +1,42 @@
+# dépendances
+node_modules/
+.pnp
+.pnp.js
+
+# build
+.next/
+out/
+build/
+dist/
+
+# environnement — JAMAIS commité
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+
+# tests / couverture
+coverage/
+.nyc_output/
+
+# éditeurs & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# plateformes
+.vercel
+.turbo
+next-env.d.ts
+*.tsbuildinfo
