@@ -3,12 +3,14 @@
 const csp = [
   "default-src 'self'",
   // Next injecte des scripts inline (hydratation) : 'unsafe-inline' requis sans nonce middleware.
-  "script-src 'self' 'unsafe-inline'",
+  "script-src 'self' 'unsafe-inline' https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.gstatic.com https://*.adtrafficquality.google https://www.googletagservices.com",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' https://fonts.gstatic.com data:",
-  "img-src 'self' data: blob:",
+  "img-src 'self' data: blob: https:",
+  // Google AdSense
+  "frame-src https://*.googlesyndication.com https://*.doubleclick.net https://www.google.com https://*.adtrafficquality.google",
   // L'API Gemini n'est appelée que côté serveur, sauf en mode « clé du visiteur ».
-  "connect-src 'self' https://generativelanguage.googleapis.com",
+  "connect-src 'self' https://generativelanguage.googleapis.com https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.gstatic.com https://*.adtrafficquality.google https://www.googletagservices.com",
   "frame-ancestors 'none'",
   "base-uri 'self'",
   "form-action 'self'",
